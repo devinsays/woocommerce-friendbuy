@@ -114,7 +114,7 @@ class WC_FriendBuy {
 		            amount: '<?php echo $order->get_total(); ?>',
 		            email: '<?php echo $order->billing_email; ?>'
 		            <?php if ( 'yes' == $settings['verify_customer'] ) : ?>, // <-- Comma not a typo
-					new_customer: '<?php echo $new_customer; ?>'
+					new_customer: <?php echo $new_customer ? 'true' : 'false'; ?>
 					<?php endif; ?>
 		        }
 		    ]);
